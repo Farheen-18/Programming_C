@@ -5,8 +5,7 @@ PracticeLab1_Question1
 
       b) Now, modify the above program to print True when none of the three integers entered by the user is equal to another, and False otherwise.
 */
-//
-/*
+//Original
 #include <stdio.h>
 int main()
 {
@@ -20,7 +19,8 @@ int main()
   
 return 0;
 }
-*/
+
+//Modified
 #include <stdio.h>
 int main()
 {
