@@ -17,15 +17,15 @@ T-4:-
 
 int main(void)
 {
-  int num;
+  int num=0;
 
-  while (num >= 1 && num <= 12)
+  while (num < 1 || num > 12)
     { scanf("%d", &num); }
 
   switch (num)
     {
       case 1: printf("January\n"); break;
-      case 2: pritnf("February\n"); break;
+      case 2: printf("February\n"); break;
       case 3: printf("March\n"); break;
       case 4: printf("April\n"); break;
       case 5: printf("May\n"); break;
