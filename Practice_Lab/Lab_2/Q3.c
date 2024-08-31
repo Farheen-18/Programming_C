@@ -14,15 +14,17 @@ This is just a conjecture and not a theorem. You need to verify if all the numbe
 If the loop runs infinitely, it means that the conjecture is not holding correctly for that number yet.
 [Hint: Explore long long or unsigned long long data types for variable declaration.]
 */
+
+
 #include <stdio.h>
 
 int main()
 {
   int N;
   while (N>1 && N< 1000000)
-    {scanf ("%d", &N)}
+    {scanf ("%d", &N);}
 
-  for (int i=2, i<=N; i++)
+  for (int i=2; i<=N; i++)
     {
       int num=i;
       while (num==1)
