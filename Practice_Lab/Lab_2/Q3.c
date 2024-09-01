@@ -20,14 +20,14 @@ If the loop runs infinitely, it means that the conjecture is not holding correct
 
 int main()
 {
-  int N;
-  while (N>1 && N< 1000000)
+  int N=0;
+  while (!(N>1 && N< 1000000))
     {scanf ("%d", &N);}
 
   for (int i=2; i<=N; i++)
     {
       int num=i;
-      while (num==1)
+      while (num!=1)
         {
           if (num%2 == 1) 
           {
@@ -35,9 +35,9 @@ int main()
           }
           else if (num%2 ==0)
           {
-            num == num/2;
+            num = num/2;
           }
-          printf("%d", num);
+          printf("%d ", num);
         }
       printf("\n");
     }
