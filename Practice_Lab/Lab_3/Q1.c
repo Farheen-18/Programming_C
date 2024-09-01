@@ -39,3 +39,16 @@ int main()
   printf("%d", (((N)*(N+1)*(2N+1))/6));
   return 0;
 }
+
+//B subpart
+int main()
+{
+  int N;
+  scanf("%d", &N);
+  int cube_sum=0;
+
+  for (int i=1; i<=N; i++)
+    cube_sum += (i**3);
+
+  printf("%d", cube_sum);
+}
