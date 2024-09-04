@@ -14,3 +14,39 @@ Input a number to check: 496
 Testcase 3
 Input a number to check: 40
 40 is NOT a Perfect number. */
+
+//find factors // add factors // compare with original number
+
+#include <stdio.h>
+
+int is_perfect_num(int num);
+
+int main()
+{
+  int num;
+  scanf("%d", &num);
+
+  if (is_perfect_num(num)==1)
+    printf("%d is a perfect number\n", num);
+  else 
+    printf("%d is not a perfect number\n", num);
+
+  return 0;
+}
+
+int is_perfect_num(int num)
+{
+  int sum_of_factors = 0;
+  int store_num = num;
+
+  for (int i=1; i<((num/2)+1); i++)
+    {
+      if (num%i==0)
+        sum_of_factors += i;
+    }
+
+  if (sum_of_factors == store_num) return 1;
+  return 0; 
+}
+
+
