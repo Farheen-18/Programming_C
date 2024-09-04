@@ -20,3 +20,35 @@ Testcase 4
 Please Enter a number: 11
 11 is a palindrome. */
 
+//new num = old num*10 + remainder
+
+#include <stdio.h>
+
+int is_palindrome(int num);
+
+int main()
+{
+  int num;
+  scanf("%d", &num);
+
+  if (is_palindrome(num)==1)
+    printf("%d is a palindrome\n", num);
+  else printf("%d is not a palindrome\n", num);
+}
+
+int is_palindrome(int num)
+{
+  int new_num=0;
+  int remainder=0;
+  int store_num = num;
+  
+  while (num!=0)
+    {
+      reaminder = num%10;
+      new_num = new_num*10 + remainder;
+      num= num/10;
+    }
+  if (new_num == store_num) return 1;
+  return 0;
+}
+
