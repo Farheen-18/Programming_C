@@ -15,6 +15,7 @@ Input - {12,25}
 
 Output - 8
   */
+  
 #include <stdio.h>
 int main()
 {
@@ -26,8 +27,19 @@ int main()
     {
       scanf("%d", &arr[i]);
     }
+
   for (int i=0; i<n; i++)
     {
-      printf("%d", arr[i]);
+      printf("%d ", arr[i]);
     }
+    printf("\n"); 
+
+  int bitwise_and = arr[0];
+
+  for (int i=1; i<n; i++)
+   {
+     bitwise_and &= arr[i];
+   }
+ printf("%d", bitwise_and);
 }
+
