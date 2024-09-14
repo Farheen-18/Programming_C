@@ -1,4 +1,5 @@
 /*Selection sort algorithm*/
+/*
 Sorted part -- Unsorted part
 Smallest element from unsorted part added to sorted part by swapping
 
@@ -10,6 +11,7 @@ Smallest element from unsorted part added to sorted part by swapping
 10 14 19 27 33 35 42 44
 10 14 19 27 33 35 42 44
 10 14 19 27 33 35 42 44
+*/
 
 #include <stdio.h>
 int main()
@@ -27,17 +29,18 @@ int main()
 
   for (int i=0; i<n; i++)
   {
-    min_no = arr[i]
+    min_no = i;
     for (int j=i; j<n; j++)
     {
-      if (arr[j] < min_no)
+      if (arr[j] < arr[min_no])
       {
-        min_no = arr[j];
-        arr[j]=arr[i];
-        arr[i]=min_no;
-        break;
+        min_no = j;
       }
     }
+    int temp = arr[min_no];
+    arr[min_no] = arr[i];
+    arr[i]= temp;
+    
     for (int k=0; k<n; k++)
     {
       printf("%d ", arr[k]);
@@ -47,4 +50,3 @@ int main()
 
 return 0;
 }
-  
