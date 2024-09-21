@@ -1,3 +1,4 @@
+/*
 Grades_Question
 
 Write a C program that prepares a report card for a student. The function report()  takes value marks from the user (integer values ranging from 0 to 100). Based on the marks, the function should assign and print the corresponding grade according to the following grading key:
@@ -30,4 +31,13 @@ Enter your marks:
 103
 
 Invalid marks entered. Please enter a value between 0 and 100.
+*/
+#include <stdio.h>
+char student(int);
+#int main()
+{
+  int marks;
+  char grade;
+  
+}
 
