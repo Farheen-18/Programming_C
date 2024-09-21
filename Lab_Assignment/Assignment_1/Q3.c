@@ -37,7 +37,7 @@ I -> I (Consider it to be ‘I’ and not ‘1’)
 No, the number does not read the same upside-down.
 */
 /*
-Attempt -1 :-
+Attempt -1 :- -- incorrect
   
 #include <stdio.h>
 #include <stdbool.h>
@@ -133,7 +133,7 @@ int main()
 
   if (is_rotationally_same(num))
     printf("Yes, the number reads the same upside-down.\n");
-  else if (is_rotationally_same(num))
+  else 
     printf("No, the number does not read the same upside-down.\n");
 }
 
@@ -152,9 +152,9 @@ bool is_rotationally_same(int num)
     }
 
   //make arrays for the number 
-  int array_num = int store_num;
+  int array_num =  store_num;
   
-  int reflection_num[len];
+  int reverse_num[len];
   for (int i=0; i<len; i++) //forms array of reflection number
     {
       reverse_num[i]= array_num%10;
@@ -192,7 +192,7 @@ bool is_rotationally_same(int num)
       }
       if (temp ==9)
       {
-        if (revser_num[i] != 6)
+        if (reverse_num[i] != 6)
           return false;
       }
       if (temp == 0)
