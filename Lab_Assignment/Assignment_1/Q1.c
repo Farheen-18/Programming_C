@@ -1,3 +1,4 @@
+/*
 Frequency_Question
 
  Write a C program to input a number and a specific digit (0-9) from the user, 
@@ -17,6 +18,7 @@ Frequency of 3 in 122353 is: 2
 5
 
 Frequency of 5 in 4491 is: 0
+ */
 
 #include <stdio.h>
   
