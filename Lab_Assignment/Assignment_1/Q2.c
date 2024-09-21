@@ -33,11 +33,38 @@ Enter your marks:
 Invalid marks entered. Please enter a value between 0 and 100.
 */
 #include <stdio.h>
+
 char student(int);
-#int main()
+
+int main()
 {
   int marks;
   char grade;
-  
+  scanf("%d", &marks);
+  grade = student(marks);
+
+  if (grade == 'x')
+      printf("Invalid marks entered. Please enter a value between 0 and 100.\n");
+  else
+    printf("Grade: %c", grade);
+
+  return 0;  
 }
 
+char student(int marks)
+{
+  if (marks >= 90 && marks <= 100)
+    return 'A';
+  else if (marks >= 80 && marks <= 89)
+    return 'B';
+  else if (marks >= 70 && marks<= 79)
+    return 'C';
+  else if (marks >= 60 && marks<= 69)
+    return 'D';
+  else if (marks >= 50 && marks <= 59)
+    return 'E';
+  else if (marks>= 0 && marks <= 49)
+    return 'F';
+  else 
+    return 'x';
+}
