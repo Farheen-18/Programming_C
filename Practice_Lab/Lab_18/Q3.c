@@ -18,4 +18,30 @@ Testcase1
 
         The difference is = 5 kilometers and 20 meters     The difference is = 0 kilometers and 500 meters
 
-    
+#include <stdio.h>
+
+struct distance
+{
+    int km;
+    int m;
+};
+
+int main()
+{
+    struct d1,d2,diff;
+
+    scanf("%d %d", d1.km, d2.m);
+    scanf("%d %d", d2.km, d2.m);
+
+    int dist1 = (d1.km) * 1000 + (d1.m);
+    int dist2 = (d2.km) * 1000 + (d2.m);
+
+    int dist_diff = dist2 - dist1;
+
+    diff.km = dist_diff /1000;
+    diff.m = dist_diff % 1000;
+
+    printf("%d %d", diff.km, diff.m);
+
+    return 0;
+}
