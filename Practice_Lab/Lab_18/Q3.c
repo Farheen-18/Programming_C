@@ -28,10 +28,10 @@ struct distance
 
 int main()
 {
-    struct d1,d2,diff;
+    struct distance d1,d2,diff;
 
-    scanf("%d %d", d1.km, d2.m);
-    scanf("%d %d", d2.km, d2.m);
+    scanf("%d %d", &d1.km, &d1.m);
+    scanf("%d %d", &d2.km, &d2.m);
 
     int dist1 = (d1.km) * 1000 + (d1.m);
     int dist2 = (d2.km) * 1000 + (d2.m);
