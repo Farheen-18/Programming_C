@@ -16,7 +16,7 @@ Testcase1
         0 5
     Output:
         Maximum distance = 6.403124
-
+// =================
 #include <stdio.h>
 #include <math.h>
 
@@ -40,7 +40,7 @@ int main()
   double max_distance = 0;
   for (int i=0; i<N; i++)
     {
-      double dist = sqrt((co_ordinates[i].x_coordinate * co_ordinates[i].x_coordinate) + (coordinates[i].y_coordinate * coordinates[i].y_coordinate));
+      double dist = sqrt((co_ordinates[i].x_coordinate * co_ordinates[i].x_coordinate) + (co_ordinates[i].y_coordinate * co_ordinates[i].y_coordinate));
       if (max_distance < dist )
         max_distance = dist;
     }
