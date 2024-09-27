@@ -96,8 +96,26 @@ int rank(char **students, int *marks, int n, char *student)
         The integer rank has been declared and initialized to -1 for your convenience.
         You need to update this variable with the correct value and return it.
     */
-    int rank = -1;
-    // Write your code here
+    int rank = 0;
+    int same_rank =0;
+    int marks_student =0;
+    for (int i=0; i<n; i++)
+      {
+        if (strcmp(*(students + i), *student) == 0)
+          marks_student = *(marks+i);
+      }
+    for (int i=0; i<n; i++)
+      {
+        if (*(marks+i) >= marks_student)
+        {
+          rank +=1;
+        }
+        if (*(marks+i) == marks_student)
+        {
+          same_rank +=1;
+        }
+      }
+    rank = rank - same_rank;
     return rank;
 }
 
