@@ -51,8 +51,14 @@ int num_pass(char **students, int *marks, int n)
         The int num_passed has been declared and initialized to -1.
         You need to update this variable with the correct value and return it.
     */
-    int num_passed = -1;
-    // Write your code here
+    int num_passed = 0;
+    for (int i=0; i<n; i++)
+      {
+        if (*(marks+i) >= 35)
+        {
+          num_passed += 1;
+        }
+      }
     return num_passed;
 }
 
@@ -95,46 +101,6 @@ int rank(char **students, int *marks, int n, char *student)
     return rank;
 }
 
-//--------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------
-
-int rank(char **students, int *marks, int n, char *student)
-{
-    /*
-        Parameters:
-        char **students: the pointer to the first element of the students array.
-
-        int *marks: the pointer to the first element of the marks array.
-
-        int n: the number of elements in the students array = the number of elements 
-        in the marks array.
-
-        char *student: the name of the student whose rank is to be found.
-
-        Functionality:
-        rank() takes in the name of a student and returns his/her rank in the class.
-        For example, if the student is the top scorer, the rank is 1. If the student
-        is the second top scorer, the rank is 2, and so on. If two or more students
-        have the same marks, they are given the same rank. For example, if there are
-        3 students with the same marks which is the highest in the class, they are
-        all given the rank 1. The next student is given the rank 4.
-        Thus, the rank of a student is the number of students who scored more marks.
-
-        Hint: You can use strcmp() to compare two strings.
-
-        Note that here the pointer to the first element of the array and number
-        of elements in the array are passed as arguments. Using these, you can
-        access all the elements of the array.
-
-        The integer rank has been declared and initialized to -1 for your convenience.
-        You need to update this variable with the correct value and return it.
-    */
-    int rank = -1;
-    // Write your code here
-    return rank;
-}
-
-//---------------------------------------------------------
 //----------------------------------------------------------
 
 int main()
