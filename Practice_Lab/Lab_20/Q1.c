@@ -29,7 +29,7 @@ int main()
   
   int temp = *ptr_a;
   *ptr_a = *ptr_b;
-  *ptr_b = *ptr_a;
+  *ptr_b = temp;
 
   printf("\nAfter swapping: %d %d", *ptr_a, *ptr_b);
 
