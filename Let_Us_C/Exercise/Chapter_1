@@ -1,0 +1,76 @@
+[A] Which of the following are invalid variable names and why? 
+
+BASICSALARY - valid
+
+#MEAN - invalid, no special symbols except '_' are allowed
+
+population in 2006 - invalid, spaces are not allowed
+
+FLOAT - valid
+
+team’svictory - invalid, no special symbols except '_' are allowed
+   
+_basic - valid
+
+group. - invalid, no special symbols except '_' are allowed
+
+over time  - invalid, spaces are not allowed
+
+hELLO - valid
+
+Plot # 3 - invalid, no special symbols except '_' are allowed
+
+basic-hra - invalid, no special symbols except '_' are allowed
+
+422 - invalid, variable cannot start with number
+
+mindovermatter - invalid, no special symbols except '_' are allowed
+
+queue. - invalid, no special symbols except '_' are allowed
+
+2015_DDay - invalid, variable cannot start with number
+
+//========================================
+
+[C] Evaluate the following expressions and show their hierarchy. 
+
+(a) g = big / 2 + big * 4 / big - big + abc / 3 ; 
+(abc = 2.5, big = 2, assume g to be a float) 
+
+Soln.: g= 2/2 + 2*4/2 - 2 + 2.5/3
+g = (2/2) + ( (2*4) / 2 ) - 2 + (2.5/3)
+= 1 + (8/2) - 2 + (2.5/3)
+= 1 + 4 - 2 + 0
+= 5-2
+= 3.00
+------------------------------------------
+
+(b) on = ink * act / 2 + 3 / 2 * act + 2 + tig ; 
+(ink = 4, act = 1, tig = 3.2, assume on to be an int) 
+
+Soln.: on = 4 * 1 / 2 + 3 / 2 * 1 + 2 + 3.2
+= ((4 * 1) / 2) + ((3/2) * 1) + 2 + 3.2
+= (4/2) + (1*1) + 2 + 3.2
+= 2 + 1 + 2 + 3.2
+= 8.20 = 8
+------------------------------------------
+
+(c) s = qui * add / 4 - 6 / 2 + 2 / 3 * 6 / god ; 
+(qui = 4, add = 2, god = 2, assume s to be an int) 
+
+Soln.: s = 4 * 2 / 4 - 6 / 2 + 2 /3 * 6 / 2
+= ((4*2)/4) - (6/2) + (((2/3)*6)/2)
+= (8/4) - 3 + ((0*6)/2)
+= 2 - 3 + (0/2)
+= -1 + 0
+= -1
+------------------------------------------
+
+(d) s = 1 / 3 * a / 4 - 6 / 2 + 2 / 3 * 6 / g ; 
+(a = 4, g = 3, assume s to be an int) 
+
+s= 1/3 * 4 - 6 / 2 + 2/3 * 6/3
+ = ((1/3) * 4) - (6/2) + ((2/3) * (6/3))
+= (0 * 4) - 3 + (0 * 2)
+= - 3
+===========================================
