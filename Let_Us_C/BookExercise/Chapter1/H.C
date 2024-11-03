@@ -62,12 +62,25 @@ int main()
   printf("%f", average);
   return 0;
 }
-
+/*
 -------------------------------
 (d) Temperature of a city in Fahrenheit degrees is input through 
 the keyboard. Write a program to convert this temperature 
 into Centigrade degrees. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+float temp_f;
+scanf("%f", &temp_f);
+
+float temp_C = (5/9)*(temp_F - 32);
+
+printf("%f", temp_C);
+return 0;
+}
+
+---------------------------------
 (e) The length & breadth of a rectangle and radius of a circle are 
 input through the keyboard. Write a program to calculate the 
 area & perimeter of the rectangle, and the area & 
