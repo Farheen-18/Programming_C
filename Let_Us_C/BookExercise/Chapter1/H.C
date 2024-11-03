@@ -40,13 +40,30 @@ dist_inch = dist_km * 39370.0787;
 printf("%f %f %f %f %f", dist_km, dist_meters, dist_cm, dist_feet, dist_inch);
 return 0;
 }
-  
+/*
+------------------------------------
 (c) If the marks obtained by a student in five different subjects 
 are input through the keyboard, find out the aggregate marks 
 and percentage marks obtained by the student. Assume that 
 the maximum marks that can be obtained by a student in each 
 subject is 100. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+  int marks;
+  float sum=0;
+  for (int i=0; i<5; i++)
+  {
+    scanf("%d", &marks);
+    sum+=marks;
+  }
+  float average = sum/5.0;
+  printf("%f", average);
+  return 0;
+}
+
+-------------------------------
 (d) Temperature of a city in Fahrenheit degrees is input through 
 the keyboard. Write a program to convert this temperature 
 into Centigrade degrees. 
