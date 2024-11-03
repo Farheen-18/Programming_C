@@ -244,22 +244,25 @@ int main()
 {
   int num;
   scanf("%d", &num);
-  int remainder=0;
+  int num_remainder=0;
   int rev_num=0;
   while (num>0)
   {
-    remainder = num%10;
-    rev_num = rev_num*10 + ((remainder+1)%10) ;
+    num_remainder = num%10;
+    rev_num = rev_num*10 + ((num_remainder)) ;
     num = num/10;
   }
   int req_num=0;
+  int rev_num_remainder;
    while (rev_num>0)
   {
-    remainder = num%10;
-    req_num = req_num*10 + ((remainder) ;
+    rev_num_remainder = rev_num%10;
+    req_num = req_num*10 + ((rev_num_remainder+1)%10) ;
     rev_num = rev_num/10;
   }
+  if (num_remainder ==9)
+    req_num = req_num * 10;
 printf("%d", req_num);
 return 0;
 }
-//-------------------------
+//---------------------------------
