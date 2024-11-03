@@ -22,14 +22,24 @@ int main()
   printf("%d", gross_salary);
   return 0;
 }
-  
+/*
 --------------------------------
 (b) The distance between two cities (in km.) is input through the 
 keyboard. Write a program to convert and print this distance 
 in meters, feet, inches and centimeters. 
-
+*/
 #include <stdio.h>
-
+int main()
+{
+float dist_km, dist_meters,dist_feet, dist_inch, dist_cm;
+scanf("%f", &dist_km);
+dist_meters = dist_km * 1000;
+dist_cm = dist_km * 100000;
+dist_feet = dist_km * 3280.8399;
+dist_inch = dist_km * 39370.0787;
+printf("%f %f %f %f %f", dist_km, dist_meters, dist_cm, dist_feet, dist_inch);
+return 0;
+}
   
 (c) If the marks obtained by a student in five different subjects 
 are input through the keyboard, find out the aggregate marks 
