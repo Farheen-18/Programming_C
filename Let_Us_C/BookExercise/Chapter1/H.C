@@ -210,13 +210,56 @@ keyboard in hundreds, find the total number of currency notes
 of each denomination the cashier will have to give to the 
 withdrawer. 
 */
-
-
+//--------------------------------------------
+/*
 (l) If the total selling price of 15 items and the total profit earned 
 on them is input through the keyboard, write a program to 
 find the cost price of one item. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+  float t_s_p;
+  float t_profit_p;
+  float t_profit;
+  float t_c_p;
+
+  scanf("%f %f", &t_s_p, &t_profit_p);
+
+  t_profit = (t_profit_p)*t_s_p * (1/100);
+
+  t_c_p = t_s_p - t_profit;
+  printf("%f", (t_c_p)/15);
+  return 0;
+}
+/*
+------------------------------
 (m) If a five-digit number is input through the keyboard, write a 
 program to print a new number by adding one to each of its 
 digits. For example if the number that is input is 12391 then 
-the output should be displayed as 23402. 
+the output should be displayed as 23402.
+*/
+#include <stdio.h>
+int main()
+{
+  int num;
+  scanf("%d", &num);
+  int remainder=0;
+  int rev_num=0;
+  while (num>0)
+  {
+    remainder = num%10;
+    rev_num = rev_num*10 + ((remainder+1)%10) ;
+    num = num/10;
+  }
+  int req_num=0;
+   while (rev_num>0)
+  {
+    remainder = num%10;
+    req_num = req_num*10 + ((remainder) ;
+    rev_num = rev_num/10;
+  }
+printf("%d", req_num);
+return 0;
+}
+//-------------------------
