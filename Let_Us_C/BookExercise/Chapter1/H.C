@@ -79,33 +79,112 @@ float temp_C = (5/9)*(temp_F - 32);
 printf("%f", temp_C);
 return 0;
 }
-
+/*
 ---------------------------------
 (e) The length & breadth of a rectangle and radius of a circle are 
 input through the keyboard. Write a program to calculate the 
 area & perimeter of the rectangle, and the area & 
 circumference of the circle. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+  int len, bre, radius;
+  float area_rect, area_cir, peri_rect, circ_cir;
+  area_rect = len * bre;
+  area_circ = 3.14 * radius * radius;
+  peri_rect = 2*(len+bre);
+  circ_cir = 2* 3.14*radius;
+}
+/*
+----------------------------
 (f) Two numbers are input through the keyboard into two 
 locations C and D. Write a program to interchange the 
 contents of C and D. 
-  
+*/
+
+#include <stdio.h>
+int main()
+{
+  int C,D;
+  scanf("%d %d", &C, &D);
+
+  int temp= C;
+  C=D;
+  D= temp;
+  return 0;
+}
+/*
+----------------------------------
 (g) If a five-digit number is input through the keyboard, write a 
 program to calculate the sum of its digits.  
 (Hint: Use the modulus operator ‘%’)  
-  
+*/
+
+#include <stdio.h>
+int main()
+{
+  int num;
+  scanf("%d", &num);
+  int sum_of_digits=0;
+  while (num>0)
+  {
+  sum_of_digits += num%10;
+  num = num/10;
+  }
+  printf("%d", sum_of_digits);
+  return 0;
+}
+/*
+--------------------------------------------------
 (h) If a five-digit number is input through the keyboard, write a 
 program to reverse the number. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+  int num;
+  scanf("%d", &num);
+  int remainder=0;
+  int rev_num=0;
+  while (num>0)
+  {
+    remainder = num%10;
+    rev_num = rev_num*10 + remainder;
+    num = num/10;
+  }
+printf("%d", rev_num);
+return 0;
+}
+/*
+----------------------------------
 (i) If a four-digit number is input through the keyboard, write a 
 program to obtain the sum of the first and last digit of this 
 number. 
-  
+*/
+#include <stdio.h>
+int main()
+{
+  int num;
+  scanf("%d", &num);
+  int f_digit, l_digit;
+  f_digit= num%10;
+  while (num>0)
+  {
+  l_digit = num%10;
+  num = num/10;
+  }
+  printf("%d %d", f_digit, l_digit);
+  return 0;
+}
+/*
+--------------------------------
 (j) In a town, the percentage of men is 52. The percentage of 
 total literacy is 48. If total percentage of literate men is 35 of 
 the total population, write a program to find the total number                                                          
 of illiterate men and women if the population of the town is 
 80,000.  
+*/
   
 (k) A cashier has currency notes of denominations 10, 50 and 
 100. If the amount to be withdrawn is input through the 
