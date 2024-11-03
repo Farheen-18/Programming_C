@@ -185,13 +185,33 @@ the total population, write a program to find the total number
 of illiterate men and women if the population of the town is 
 80,000.  
 */
-  
+#include <stdio.h>
+int main()
+{
+  int men,women,lit_men,lit_women,illit_men,illit_women,tot_lit;
+  men=52;
+  lit_men=35;
+  tot_lit = 48;
+  illit_men = men - lit_men;
+  lit_women= tot_lit - lit_men;
+  illit_women = 100 - men - lit_women;
+
+  int total_i_w = (illit_women)*80000*(1/100);
+  int total_i_m = (illit_men)*80000*(1/100);
+
+  printf("%d %d", total_i_w, total_i_m);
+  return 0;
+}
+/*
+---------------------------------
 (k) A cashier has currency notes of denominations 10, 50 and 
 100. If the amount to be withdrawn is input through the 
 keyboard in hundreds, find the total number of currency notes 
 of each denomination the cashier will have to give to the 
 withdrawer. 
-  
+*/
+
+
 (l) If the total selling price of 15 items and the total profit earned 
 on them is input through the keyboard, write a program to 
 find the cost price of one item. 
